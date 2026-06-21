@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Timer, CheckSquare, BarChart2, User } from "lucide-react";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 import Navbar from "./components/Navbar";
 import Dock from "./components/Dock";
