@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Timer, CheckSquare, BarChart2, User } from "lucide-react";
+import { Analytics } from "@vercel/analytics/next";
 
 import Navbar from "./components/Navbar";
 import Dock from "./components/Dock";
@@ -256,6 +257,7 @@ export default function App() {
         transition: "background 0.35s ease, color 0.35s ease",
       }}
     >
+      <Analytics />
       <Navbar theme={theme} setTheme={setTheme} />
 
       {/* Main viewport */}
