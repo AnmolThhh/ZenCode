@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import "tailwindcss";
+
+/* ─── Base font ──────────────────────────────────────────────────────────── */
+:root {
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--app-bg);
+  color: var(--text-1);
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+/* ─── Theme definitions ──────────────────────────────────────────────────── */
+
+/* ZenCore — original obsidian dark */
+:root,
+:root[data-theme="zencore"] {
+  --app-bg:       #09090b;
+  --navbar-bg:    rgba(9,9,11,0.90);
+  --dock-bg:      rgba(24,24,27,0.88);
+  --surface-1:    rgba(24,24,27,0.85);
+  --surface-2:    rgba(14,14,18,0.97);
+  --border:       rgba(63,63,70,0.50);
+  --border-s:     rgba(63,63,70,0.70);
+  --text-1:       #f4f4f5;
+  --text-2:       #a1a1aa;
+  --text-3:       #71717a;
+  --text-4:       #3f3f46;
+  --accent:       #34d399;
+  --scrollbar:    #3f3f46;
+}
+
+/* Gruvbox — warm earthy dark */
+:root[data-theme="gruvbox"] {
+  --app-bg:       #282828;
+  --navbar-bg:    rgba(29,32,33,0.92);
+  --dock-bg:      rgba(40,40,40,0.92);
+  --surface-1:    rgba(50,48,47,0.90);
+  --surface-2:    rgba(29,32,33,0.97);
+  --border:       rgba(102,92,84,0.45);
+  --border-s:     rgba(102,92,84,0.70);
+  --text-1:       #ebdbb2;
+  --text-2:       #bdae93;
+  --text-3:       #928374;
+  --text-4:       #7c6f64;
+  --accent:       #fabd2f;
+  --scrollbar:    #504945;
+}
+
+/* Catppuccin Mocha — cool purple dark */
+:root[data-theme="mocha"] {
+  --app-bg:       #1e1e2e;
+  --navbar-bg:    rgba(17,17,27,0.92);
+  --dock-bg:      rgba(30,30,46,0.92);
+  --surface-1:    rgba(49,50,68,0.85);
+  --surface-2:    rgba(24,24,37,0.97);
+  --border:       rgba(88,91,112,0.45);
+  --border-s:     rgba(88,91,112,0.70);
+  --text-1:       #cdd6f4;
+  --text-2:       #a6adc8;
+  --text-3:       #6c7086;
+  --text-4:       #585b70;
+  --accent:       #cba6f7;
+  --scrollbar:    #45475a;
+}
+
+/* Catppuccin Latte — cool light */
+:root[data-theme="latte"] {
+  --app-bg:       #eff1f5;
+  --navbar-bg:    rgba(230,233,239,0.94);
+  --dock-bg:      rgba(188,192,204,0.92);
+  --surface-1:    rgba(204,208,218,0.90);
+  --surface-2:    rgba(230,233,239,0.97);
+  --border:       rgba(140,143,161,0.35);
+  --border-s:     rgba(140,143,161,0.60);
+  --text-1:       #4c4f69;
+  --text-2:       #7c7f93;
+  --text-3:       #9ca0b0;
+  --text-4:       #bcc0cc;
+  --accent:       #8839ef;
+  --scrollbar:    #9ca0b0;
+}
+
+/* Parchment — warm sepia light */
+:root[data-theme="parchment"] {
+  --app-bg:       #f5f0e8;
+  --navbar-bg:    rgba(240,234,220,0.94);
+  --dock-bg:      rgba(218,210,195,0.92);
+  --surface-1:    rgba(228,220,205,0.90);
+  --surface-2:    rgba(240,234,220,0.97);
+  --border:       rgba(160,150,130,0.40);
+  --border-s:     rgba(160,150,130,0.65);
+  --text-1:       #2c2416;
+  --text-2:       #6b5a42;
+  --text-3:       #9e8b70;
+  --text-4:       #c4ae8e;
+  --accent:       #d65d0e;
+  --scrollbar:    #c4ae8e;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 4px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--scrollbar, #3f3f46); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
